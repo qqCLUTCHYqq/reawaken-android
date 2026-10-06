@@ -1,0 +1,8 @@
+{
+  "packageId": "org.reawaken.android.installer",
+  "apk": "reawaken-content-installer.apk",
+  "sha256": "42cf06941facbfae3c371ec30c18695a075fe42c8cd24e42cc552bdf18d4d516",
+  "developmentOnly": true,
+  "targetSdk": 29,
+  "minSdk": 26
+}

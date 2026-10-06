@@ -1,0 +1,23 @@
+{
+  "packageId": "com.square_enix.android_googleplay.khuxww",
+  "versionName": "5.0.1",
+  "versionCode": 87,
+  "provenance": "User-owned Downloads XAPK inspected 2026-10-06. Local baseline, not independent publisher authenticity attestation.",
+  "apk": {
+    "name": "com.square_enix.android_googleplay.khuxww.apk",
+    "bytes": 89615133,
+    "sha256": "2886de776e5493caf0f7cfe379a111df6c26f3c451ea483d7915b3bbf2c81732"
+  },
+  "content": [
+    {
+      "name": "main.76.com.square_enix.android_googleplay.khuxww.obb",
+      "bytes": 1652397828,
+      "sha256": "5c08d36b4456045fa44a760ebeac38792de69de7060275891fbe8e8f4f8716d8"
+    },
+    {
+      "name": "patch.87.com.square_enix.android_googleplay.khuxww.obb",
+      "bytes": 533504978,
+      "sha256": "b771b01d955e8b4f909bd2304c1266b67c357432ad651b767e46f476a60e927f"
+    }
+  ]
+}
