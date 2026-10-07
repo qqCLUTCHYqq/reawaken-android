@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-feature android:glEsVersion="0x00020000" android:required="true" />
-    <application android:label="Cross Road" android:icon="@drawable/ic_crossroad"
+    <application android:label="Re:Awaken" android:icon="@drawable/ic_crossroad"
         android:theme="@android:style/Theme.Material.NoActionBar"
         android:hardwareAccelerated="true" android:allowBackup="false"
         android:usesCleartextTraffic="false" android:supportsRtl="true">

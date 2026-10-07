@@ -64,7 +64,7 @@ class MainActivity : ComponentActivity() {
         WebView.setWebContentsDebuggingEnabled(BuildConfig.DEBUG)
         web.webChromeClient = object : WebChromeClient() {
             override fun onConsoleMessage(message: ConsoleMessage): Boolean {
-                Log.d("CrossRoad", message.message().take(2000)); return true
+                Log.d("ReAwaken", message.message().take(2000)); return true
             }
             override fun onPermissionRequest(request: PermissionRequest) { request.deny() }
         }
@@ -81,13 +81,13 @@ class MainActivity : ComponentActivity() {
                         WebResourceResponse("application/octet-stream", null, assets.open("web/" + uri.lastPathSegment + ".payload"))
                     } else loader.shouldInterceptRequest(uri) ?: response(404, "Not Found", "text/plain", byteArrayOf())
                 } catch (error: Exception) {
-                    Log.w("CrossRoad", "Content request failed: ${error.message}")
+                    Log.w("ReAwaken", "Content request failed: ${error.message}")
                     response(502, "Content unavailable", "text/plain", "Content unavailable. Check connection and restart.".toByteArray())
                 }
             }
             override fun onRenderProcessGone(view: WebView, detail: RenderProcessGoneDetail): Boolean {
                 rendererGone = true
-                AlertDialog.Builder(this@MainActivity).setMessage("Android stopped the WebView. Reopen Cross Road. Previously saved progress is retained.")
+                AlertDialog.Builder(this@MainActivity).setMessage("Android stopped the WebView. Reopen Re:Awaken. Previously saved progress is retained.")
                     .setPositiveButton("Close") { _, _ -> finish() }.setCancelable(false).show()
                 (view.parent as? LinearLayout)?.removeView(view); view.destroy(); return true
             }
@@ -113,7 +113,7 @@ class MainActivity : ComponentActivity() {
     }
     private fun confirmLeave() {
         // Do not navigate to arbitrary history or silently discard an active game.
-        AlertDialog.Builder(this).setMessage("Leave Cross Road? Progress must be saved by the game first.")
+        AlertDialog.Builder(this).setMessage("Leave Re:Awaken? Progress must be saved by the game first.")
             .setNegativeButton("Stay", null).setPositiveButton("Leave") { _, _ -> finish() }.show()
     }
     override fun onDestroy() { if (::web.isInitialized && !rendererGone) web.destroy(); super.onDestroy() }

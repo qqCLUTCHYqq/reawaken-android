@@ -43,7 +43,7 @@ jobs:
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: CrossRoad-Android-debug
+          name: ReAwaken-Android-debug
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
       - name: Enable KVM
@@ -65,5 +65,5 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: CrossRoad-Android-smoke
+          name: ReAwaken-Android-smoke
           path: build/smoke/

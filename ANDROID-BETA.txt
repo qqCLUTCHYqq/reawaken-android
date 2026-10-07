@@ -72,7 +72,7 @@ failure recovery remain beta testing areas. No Android Save Editor is included.
 
 Feedback:
 Click Export Beta Report after success or failure, review the JSON, and attach it
-to https://github.com/qqCLUTCHYqq/cross-road-android/issues
+to https://github.com/qqCLUTCHYqq/reawaken-android/issues
 Include device model + Android version + success/failure + steps to reproduce.
 Reports contain the beta/Windows/Android versions, manufacturer/model/API/ABI,
 ADB status, package/version, install/content/hash/launch results and fixed error
@@ -84,10 +84,7 @@ Only attach the exported beta-report JSON. Do not share runtime-cache: it holds
 your private staging files and local unfiltered troubleshooting logs.
 
 iPhone/iPad users: the finished Re:Awaken iOS v1.0.2 remains separate and unchanged:
-https://github.com/qqCLUTCHYqq/cross-road-ios-native/releases/tag/reawaken-v1.0.2
+https://github.com/qqCLUTCHYqq/reawaken-ios/releases/tag/reawaken-v1.0.2
 This Android prerelease does not replace or update that release.
 
-Download the Windows beta ZIP from the Android prerelease:
-https://github.com/qqCLUTCHYqq/cross-road-android/releases/tag/reawaken-android-v1.0.0-beta.1
-
-GitHub-generated source archives are not installers. Use the attached Windows ZIP.
+Download: https://github.com/qqCLUTCHYqq/reawaken-android/releases/tag/reawaken-android-v1.0.0-beta.1

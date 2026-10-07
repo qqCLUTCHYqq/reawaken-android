@@ -5,7 +5,7 @@ const logs=[];
 globalThis.__pwaContent={ready:false,count:0,source:'android-r2'};
 globalThis.safariLog=line=>{
   const message=String(line);logs.push(message);if(logs.length>120)logs.shift();
-  console.log('[CrossRoad]',message);
+  console.log('[ReAwaken]',message);
 };
 globalThis.__createStandaloneWorker=()=>{
   const worker=new Worker(new URL('runtime-worker.js',document.baseURI));
@@ -28,6 +28,6 @@ globalThis.crossroadShowDiagnostics=()=>{
   document.dispatchEvent(new Event('crossroad-overlay'));
   let dialog=document.querySelector('#android-diagnostics');
   if(!dialog){dialog=document.createElement('dialog');dialog.id='android-diagnostics';const close=document.createElement('button');close.textContent='Close diagnostics';close.onclick=()=>dialog.close();dialog.append(close,document.createElement('pre'));document.body.append(dialog);}
-  dialog.querySelector('pre').textContent='Cross Road Android 0.1-poc\n'+navigator.userAgent+'\nVisibility: '+document.visibilityState+'\nAudio: '+JSON.stringify(globalThis.crossroadAudioDiagnostics?.()||{})+'\n'+logs.join('\n');
+  dialog.querySelector('pre').textContent='Re:Awaken Android 0.1-poc\n'+navigator.userAgent+'\nVisibility: '+document.visibilityState+'\nAudio: '+JSON.stringify(globalThis.crossroadAudioDiagnostics?.()||{})+'\n'+logs.join('\n');
   if(!dialog.open)dialog.showModal();
 };
