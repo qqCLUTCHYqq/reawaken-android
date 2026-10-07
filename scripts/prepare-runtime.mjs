@@ -40,7 +40,7 @@ for(const [name,sha] of Object.entries(lock.files)) {
       .replace(/\s*<meta[^>]*name="apple-[^>]*>/g,'')
       .replace(/<script>\s*if \('serviceWorker'[\s\S]*?<\/script>/,'')
       .replace('src="pwa-loader.js"','src="android-loader.js"')
-      .replace('<title>Cross Road — Safari test</title>','<title>Cross Road Android</title>')
+      .replace('<title>Cross Road — Safari test</title>','<title>Re:Awaken Android</title>')
       .replace('</head>','<link rel="stylesheet" href="android.css"></head>');
     if(text.includes('service-worker.js')||text.includes('pwa-loader.js'))throw Error('Unexpected PWA bootstrap');
     result=Buffer.from(text);
