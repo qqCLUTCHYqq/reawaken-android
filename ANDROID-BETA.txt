@@ -1,90 +1,62 @@
-ANDROID BETA — PHYSICAL DEVICE TESTERS WANTED
+## ANDROID BETA — PHYSICAL DEVICE TESTERS WANTED
 
-Re:Awaken Android Beta 1 (1.0.0-beta.1)
-This is a PUBLIC BETA, not stable or fully hardware-validated Android support.
-Physical-device compatibility is what this beta is intended to test.
+**Public beta. Not stable or fully hardware-validated Android support. Physical-device compatibility is what this beta is intended to test.**
 
-Proven in Android 11 emulator:
-* APK validation
-* Non-root APK installation
-* Non-root OBB placement
-* SHA256 verification
-* Game launch
-* Dark Road offline gameplay
-* Union χ Theater offline playback
-* Progress persistence
+### Download Beta 2 — the current Android beta
 
-The non-root install was proved on a separate fresh, never-rooted emulator.
-Gameplay/theater/persistence were proved in the earlier Android 11 emulator
-validation; those runtime tests initially used root solely for development OBB
-placement. The beta's installer never requests or uses root. These two evidence
-sets do not establish compatibility with every physical device or Android version.
+**Re:Awaken Android Beta 2 (1.0.0-beta.2)** is the version new testers should download. Beta 1 remains historical. Existing Beta 1 users must download/extract Beta 2 once because the original Beta 1 executable has no updater. Your KHUX installation does not need reinstalling; do not click Install on Android for an already-installed game.
 
-NOT YET PROVEN ON PHYSICAL ANDROID HARDWARE.
-Android 8+ is the companion's declared range, conditional on actual access and
-ABI/API checks. Android 11 is tested; other Android versions/OEM firmware are
-untested. AYN Thor and other Android handheld reports are especially useful.
-Only the primary Android user is supported. Controller mapping is not included.
+### New: Android application self-updater
 
-Requirements:
-* Windows 10/11 x64 PC with .NET Framework 4.8
-* Android device supporting the APK's ARM64 or ARMv7 native libraries
-* USB data cable and USB debugging enabled
-* User-owned compatible KHUX + Dark Road 5.0.1 WW XAPK
-* Internet on the PC for legitimate runtime/ADB tooling, with SDK terms accepted
-* Local staging space of about 2.3 GB plus the XAPK/tools, and about 3 GB free
-  space on Android. This does not include all future gameplay/save needs.
+- Automatic startup checks and **Settings → Check for Updates**
+- Installed/available versions and release notes; **Update Now** and **Later**
+- **Beta** channel by default (Android prereleases); **Stable** channel for stable Android releases only
+- Official Android Windows ZIP selection from **qqCLUTCHYqq/reawaken-android**; published SHA256 verification before installing and per-file integrity checks
+- Verified backups, safe application-file replacement, relaunch and automatic rollback on failure; retained recovery helper for interrupted updates
+- Selected XAPK location, SDK acceptance, settings, device/diagnostics preferences and future backup files are preserved under the Android settings folder
 
-Start:
-Extract ReAwaken-Android-Beta-1-Windows-x64.zip to a writable folder.
-Open ReAwaken-Android-Beta.exe. Connect/unlock Android. Enable Developer Options
-by tapping Build number seven times (usually Settings > About device, sometimes
-under Software information). Enable USB debugging in Developer Options and
-accept the computer authorization prompt. Select your own XAPK, review SDK terms,
-then Install on Android. A verified official Node runtime and its complete
-upstream license are bundled; the launcher obtains verified official ADB.
+**Re:Awaken desktop updates never reinstall, modify, update, delete or replace your KHUX/Dark Road APK or OBB files.** The Android updater never uses the iOS release feed. Future compatible Android releases can update through the application; an update still requires you to click Update Now.
 
-The flow validates the original APK plus main.76 and patch.87 OBBs, installs,
-places both OBBs, verifies SHA256 from device storage, and launches the game.
-No game APK/XAPK/OBB/content is supplied, downloaded or re-signed by Re:Awaken.
-Compatibility validation is pinned to the known validated original files; a
-different/repacked XAPK is refused for review. No APK/OBB patches are needed for
-the tested offline paths. The optional Google Play Games prompt can be cancelled.
+Local Beta 1 → simulated Beta 2 updater testing passed, including actual Windows relaunch, settings/XAPK preservation, corrupt-download rejection, failed-startup rollback and interrupted-transaction recovery. No fake test release was published.
 
-If direct ADB OBB access is restricted, Re:Awaken uses its own signed installer
-companion. Follow the normal Android storage and Allow from this source prompts,
-then Continue. Keep Android connected/unlocked and the companion foreground.
-Access is tested before installing the game. If the firmware blocks both routes,
-the beta stops clearly. No root, bootloader unlocking, custom firmware, arbitrary
-permission grants or manual file-manager workaround. The companion may be removed
-or its permissions revoked afterward. The Windows beta launcher is unsigned;
-the included companion is signed independently of all Apple tooling.
+### Proven in Android 11 emulator
 
-Failure safety:
-Existing KHUX installations and game content are refused for replacement. The
-beta never uninstalls the game, clears saves or overwrites existing content.
-It creates/removes only its own small access probes and writes new game files;
-partial transfers are preserved. It does not auto-retry over a partial/existing
-installation. Export a report if a transfer fails and request help rather than
-deleting saves. Re:Awaken replaces no user data, so no replacement backup is
-needed. Newer firmware restrictions, USB drivers, backgrounding, disconnects and
-failure recovery remain beta testing areas. No Android Save Editor is included.
+- APK validation
+- Non-root APK installation
+- Non-root OBB placement
+- SHA256 verification
+- Game launch
+- Dark Road offline gameplay
+- Union χ Theater offline playback
+- Progress persistence
 
-Feedback:
-Click Export Beta Report after success or failure, review the JSON, and attach it
-to https://github.com/qqCLUTCHYqq/reawaken-android/issues
-Include device model + Android version + success/failure + steps to reproduce.
-Reports contain the beta/Windows/Android versions, manufacturer/model/API/ABI,
-ADB status, package/version, install/content/hash/launch results and fixed error
-codes derived from ADB and game logcat. They contain no serials, passwords,
-credentials, personal file paths, raw logs, game bytes or saves. Crash-buffer
-classifications may describe a recent package crash rather than the current run.
-Reports are exported locally; nothing is automatically uploaded.
-Only attach the exported beta-report JSON. Do not share runtime-cache: it holds
-your private staging files and local unfiltered troubleshooting logs.
+**Not yet proven on physical Android hardware.** The installer workflow passed clean-extraction emulator testing; the exact published Beta 2 ZIP will receive the post-publication clean test documented below. Beta 1 passed a final clean-extraction installation test using the packaged Windows launcher, automatic ADB setup, normal companion permission prompts, both OBB readback hashes, launch and sanitized diagnostics. The installation emulator was never rooted. Earlier gameplay/theater/persistence validation used a separate emulator with root only for initial development OBB placement; the beta installer never uses root.
 
-iPhone/iPad users: the finished Re:Awaken iOS v1.0.2 remains separate and unchanged:
-https://github.com/qqCLUTCHYqq/reawaken-ios/releases/tag/reawaken-v1.0.2
-This Android prerelease does not replace or update that release.
+### Requirements and start
 
-Download: https://github.com/qqCLUTCHYqq/reawaken-android/releases/tag/reawaken-android-v1.0.0-beta.1
+- Windows 10/11 x64 PC with .NET Framework 4.8
+- Android device supporting ARM64 or ARMv7 native libraries
+- USB data cable
+- USB debugging enabled and the computer authorization prompt accepted
+- **User-owned compatible KHUX + Dark Road 5.0.1 WW XAPK**
+- PC internet for legitimate ADB tooling and acceptance of Google SDK terms
+
+Download **ReAwaken-Android-Beta-2-Windows-x64.zip**, extract it into a writable folder, and open **ReAwaken-Android-Beta.exe**. Enable Developer Options by tapping Build number seven times; enable USB debugging and accept this computer. Select your XAPK and install. Re:Awaken validates the unchanged original APK/main.76/patch.87, installs, transfers both OBBs, verifies hashes, and launches the game. A verified official Node runtime and upstream license are included; Google ADB is obtained automatically. Allow about 2.3 GB of PC staging space plus your XAPK/tools, and about 3 GB free on Android.
+
+If firmware restricts direct ADB OBB access, follow the companion’s normal storage and Allow from this source prompts, then Continue. Keep it foreground and Android connected/unlocked. Access is probed before game installation; if both routes fail, the beta stops clearly. Android 11 is proven; Android 8+ is a conditional declared range, with other Android versions/OEM firmware/AYN Thor untested. Only the primary Android user is supported.
+
+**No game APK, XAPK, OBB, saves or copyrighted game content is included or downloaded. No root, bootloader unlocking, custom firmware, file-manager hacks, game patches or game re-signing.** Existing game installations/content are preserved and refused for replacement. Partial game-content files are retained on installation failure; game replacement/updates are deferred. The separate desktop updater never changes the game installation. No Android Save Editor or controller mapping is included. The Windows launcher is unsigned; the companion is separately signed.
+
+### Tester feedback
+
+Click **Export Beta Report**, review the JSON, then attach it to [GitHub Issues](https://github.com/qqCLUTCHYqq/reawaken-android/issues). Report **device model + Android version + success/failure + exported report**, and steps to reproduce. AYN Thor and other Android handheld testers are welcome.
+
+The report contains beta/Windows/Android versions, manufacturer/model/API/ABI, ADB status, package/version, APK/content/hash/launch results and fixed sanitized error codes from ADB/game logcat. No serials, personal paths, passwords, credentials, raw logs, game bytes or saves. Nothing is automatically uploaded. Do not attach runtime-cache or game/save files; cache holds private staging and unfiltered local logs. Recent crash-buffer codes may precede the current attempt.
+
+### iPhone / iPad remains separate
+
+[Stable Re:Awaken iOS v1.0.2](https://github.com/qqCLUTCHYqq/reawaken-ios/releases/tag/reawaken-v1.0.2) remains available and untouched. This Android prerelease does not replace it. Use the attached Windows beta ZIP; GitHub-generated source archives are not installers.
+
+**ZIP SHA256:** `1b8b9282aaf76955db0a754844cfc4c224ca66b29098199e80db0103d8915923`
+
+
