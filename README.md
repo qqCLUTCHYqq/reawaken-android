@@ -26,7 +26,7 @@ Physical hardware remains untested. Android 11 is proven; the companion's Androi
 
 Click **Export Beta Report**, review it and attach it to [GitHub Issues](https://github.com/qqCLUTCHYqq/reawaken-android/issues). Include model, Android version, success/failure and reproduction steps. Reports contain version/device details, installation stages and fixed sanitized error codes, without serials, credentials, personal paths, raw logs, game bytes or saves. Nothing is automatically uploaded; never attach runtime-cache or game/save files.
 
-The repository is now **qqCLUTCHYqq/reawaken-android**. Releases, tags, issues and history are retained. The original Beta 1 ZIP/checksum is unchanged; its old feedback links remain usable through redirects. **Android Beta 1 has no in-app updater.** [Release discovery](https://api.github.com/repos/qqCLUTCHYqq/reawaken-android/releases) includes prereleases; stable-only latest-release queries are not a beta-update mechanism.
+The repository is now **qqCLUTCHYqq/reawaken-android**. Releases, tags, issues and history are retained. The original Beta 1 ZIP/checksum is unchanged; its old feedback links remain usable through redirects. **The original published Android Beta 1 has no in-app updater.** The current native desktop source adds startup checks, Settings → Check for Updates, Beta/Stable channels, verified downloads and rollback. Existing users need one updater-enabled download before future in-app updates. See [updater build/recovery instructions](docs/android-desktop-updater.md). [Release discovery](https://api.github.com/repos/qqCLUTCHYqq/reawaken-android/releases) includes prereleases; stable-only latest-release queries are not a beta-update mechanism.
 
 ## iPhone / iPad and historical implementation
 
